@@ -33,6 +33,7 @@ body {
 
 .content {
 	padding: 10px;
+	border-top: 5px solid salmon;
 }
 
 .content h2{
@@ -49,14 +50,6 @@ body {
 	text-decoration: none;
 }
 
-.gambar {
-	height: 400px;
-	background-image: url(/assets/img/koding1.jpg);
-	background-size: 52%;
-	background-position: 0 -50;
-	border-bottom : 5px solid lightskyblue;
-	border-top: 5px solid salmon;
-}
 .content p {
 	margin-bottom: 10px;
 	font-size: 18px;
@@ -72,5 +65,17 @@ body {
 	text-align: center;
 	padding: 10px;
 	font-size: 15px;
+}
 
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  body h1 {
+    color: green;
+  }
+  .footer {
+    background-color: salmon;
+  }
+  .header a:hover {
+	background-color: lightskyblue;
+	color: black;
+   }
 }
