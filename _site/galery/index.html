@@ -3,8 +3,14 @@
 	<title>Sartiah14116166</title>
 </head>
 <style>
-body {
-	background-image: url(/assets/img/sativa.png);
+
+body { 
+    background-color: #eee;
+    color: #222;
+}
+.malam{
+    background-color: #222;
+    color: #eee;
 }
 .container {
   width: 100%;
@@ -44,14 +50,6 @@ body {
   padding: 10px;
   font-size: 15px;
 }
-.gambar1 {
-	height: 340px;
-	background-image: url(prof.jpg);
-	background-size: cover;
-	background-position: 0 -50;
-	border-bottom : 5px solid lightskyblue;
-	border-top: 5px solid salmon;
-}
 .content {
   padding: 10px;
   border-top: 5px solid salmon;
@@ -65,20 +63,8 @@ body {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-gap: 10px;
-  	padding: 10px;
-}
-
-.grid-container > div {
-  background-color: gray (255, 255, 255, 0.8);
   text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
-.galery1 {
-  grid-row: 1 / 2;
+  grid-template-columns: auto auto;
 }
 
  img {
@@ -94,8 +80,60 @@ body {
   border-right: 5px solid lightskyblue;
 }	
 
+@media screen and (min-width: 300px) and (max-width: 600px) {
+ 
+  body h1 {
+    color: green;
+  }
+ 
+  .footer {
+    background-color: salmon;
+  }
+  .container {
+    max-width: auto;
+    height: auto;
+
+  }
+  .grid-container{
+    max-width: auto;
+    height: auto;
+    grid-template-columns: auto;
+
+  }
+  img {
+    max-width: auto;
+    height: auto;
+  }
+  .header a:hover {
+  background-color: lightskyblue;
+  color: black;
+   }
+
+}
+
 </style>
-<body>
+<body class="malam">
+  <button id="tombol">
+    Berubah ke mode malam
+  </button>
+
+  <script>
+    switcher = document.getElementById("tombol")
+    switcher.onclick = function(){
+      body = document.getElementsByTagName("body")[0]
+      if (switcher.innerText == "Berubah ke mode malam")
+      {
+        switcher.innerText = "Berubah ke mode siang";
+        body.classList.add("malam")
+      }else
+      {
+        switcher.innerText = "Berubah ke mode malam";
+        body.classList.remove("malam")
+
+      }
+    }
+    
+   </script>
 	<div class="container">
 		<div class="header">			
 			<h1 class="judul">Selamat Datang di Website Saya </h1>
@@ -113,6 +151,7 @@ body {
 		  <div class="galery2"><img src="/assets/img/galeri2.jpg"></div>
 		  <div class="galery3"><img src="/assets/img/galeri1.jpg"></div>
 		  <div class="galery4"><img src="/assets/img/galeri2.jpg"></div>
+
 		</div>	
 		<div class="footer">
 			<p class="copy"> @sartiahtia_Teknik_Informatika</p>
