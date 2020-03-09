@@ -1,10 +1,116 @@
 <html>
 <head>
   <title>Sartiah14116166</title>
-  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<style>
+body { 
+    background-color: #eee;
+    color: #222;
+}
+.malam{
+    background-color: #222;
+    color: #eee;
+}
+.container {
+  width: 100%;
+  margin: auto;
+  background-color: white;
+}
+  
+.header {
+}
 
-<body>
+.header .judul {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px;
+}
+.header ul li {
+  display: inline-block;
+  margin-right: 50px;
+  margin-left: -30px;
+}
+.header a {
+  text-decoration: none;
+  color: salmon;
+}
+
+.header a:hover {
+  background-color: lightskyblue;
+  color: white;
+
+}
+
+.content {
+  padding: 10px;
+  border-top: 5px solid salmon;
+}
+
+.content h2{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.content .penulis {
+  font-size: 15px;
+  margin-top: 5px;
+}
+.content .penulis a {
+  color: salmon;
+  text-decoration: none;
+}
+
+.content p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-align: justify-all;
+}
+
+.footer {
+  background-color: pink;
+}
+
+.footer .copy {
+  color: black;
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  body h1 {
+    color: green;
+  }
+  .footer {
+    background-color: salmon;
+  }
+  .header a:hover {
+  background-color: lightskyblue;
+  color: black;
+   }
+}
+</style>
+
+<body class="malam">
+  <button id="tombol">
+    Berubah ke mode malam
+    <script>
+      switcher = document.getElementById("tombol")
+    switcher.onclick = function(){
+      body = document.getElementsByTagName("body")[0]
+      if (switcher.innerText == "Berubah ke mode malam")
+      {
+        switcher.innerText = "Berubah ke mode siang";
+        body.classList.add("malam")
+      }else
+      {
+        switcher.innerText = "Berubah ke mode malam";
+        body.classList.remove("malam")
+
+      }
+    }
+    </script>
+  </button>
   <div class="container">
     <div class="header">      
       <h1 class="judul">Selamat Datang di Website Saya </h1>

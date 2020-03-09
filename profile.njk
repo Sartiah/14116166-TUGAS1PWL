@@ -3,9 +3,15 @@
 	<title>Sartiah14116166</title>
 </head>
 <style>
-body {
-	background-image: url(/assets/img/sativa.png);
+body { 
+    background-color: #eee;
+    color: #222;
+  }
+.malam{
+    background-color: #222;
+    color: #eee;
 }
+
 
 .container {
   width: 100%;
@@ -70,7 +76,28 @@ body {
 }
 
 </style>
-<body>
+<body class="malam">
+  <button id="tombol">
+    Berubah ke mode malam
+  </button>
+
+  <script>
+    switcher = document.getElementById("tombol")
+    switcher.onclick = function(){
+      body = document.getElementsByTagName("body")[0]
+      if (switcher.innerText == "Berubah ke mode malam")
+      {
+        switcher.innerText = "Berubah ke mode siang";
+        body.classList.add("malam")
+      }else
+      {
+        switcher.innerText = "Berubah ke mode malam";
+        body.classList.remove("malam")
+
+      }
+    }
+    
+   </script>
 	<div class="container">
 		<div class="header">			
 			<h1 class="judul">Selamat Datang di Website Saya </h1>
